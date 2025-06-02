@@ -23,7 +23,7 @@ const addProduct = async(req,res)=>{
             console.log("addedProduct : ",addedProduct)
             return res
             .status(201)
-            .json({product: addedProduct, message:"Product is Created Successfully"} )
+            .json({data: addedProduct, message:"Product is Created Successfully"} )
         
         } catch (error) {
             console.log("Error While adding a Product",error)
