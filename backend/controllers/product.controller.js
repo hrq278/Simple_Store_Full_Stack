@@ -20,7 +20,7 @@ const addProduct = async(req,res)=>{
                     image
                 }
             )
-            console.log("addedProduct : ",addedProduct)
+          //  console.log("addedProduct : ",addedProduct)
             return res
             .status(201)
             .json({data: addedProduct, message:"Product is Created Successfully"} )
@@ -53,12 +53,12 @@ const updateProduct= async(req,res)=>{
              { new: true }
         )
 
-        console.log(updatedProduct)
+        //console.log(updatedProduct)
         return res.status(200).json({data: updatedProduct,success :true, message: "Product Updated Successfully"})
 
     } catch (error) {
         console.log("Error While adding a Product",error)
-             return res.status(500).json({ message: "Server error", success:false })
+        return res.status(500).json({ message: "Server error", success:false })
     }
 
 }
@@ -88,7 +88,7 @@ const getallProduct= async(req,res)=>{
      if (!allproduct) {
          return res.json({message:"No Products"})
      }
-     console.log(allproduct)
+    // console.log(allproduct)
      return res.status(200).json({data: allproduct, success : true, message: "List of All Product"})
    } catch (error) {
             console.log("Error While getting all Products",error)

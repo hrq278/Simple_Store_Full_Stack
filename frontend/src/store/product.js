@@ -1,5 +1,4 @@
 import { create } from "zustand"
-import { updateProduct } from "../../../backend/controllers/product.controller";
 
 export const useProductStore = create((set)=>({
     products:[],
@@ -10,7 +9,7 @@ export const useProductStore = create((set)=>({
             return {message: "please fill in all fields. ", success:false};
         }
 
-        const res = await fetch("/api/products", {
+        const res = await fetch("http://localhost:5000/api/products", {
             method: "POST",
             headers:{
                 "Content-Type" :"application/json"
@@ -28,7 +27,7 @@ export const useProductStore = create((set)=>({
     },
     fetchProducts: async () => {
 
-        const res= await fetch("/api/products");
+        const res= await fetch("http://localhost:5000/api/products");
         const data = await res.json();
         set({products:data.data})
     },
@@ -47,7 +46,6 @@ export const useProductStore = create((set)=>({
     },
     updateProduct: async (pid, updatedProduct) => {
 
-        console.log(pid);
         try {
             
             const res = await fetch(`http://localhost:5000/api/products/${pid}`,{
