@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectionInstance } from "./db/connection.js";
 import productRoutes from "./routes/product.route.js"
+import cors from "cors"
 
 dotenv.config(
     {
@@ -11,6 +12,11 @@ dotenv.config(
 
 const app = express()
 
+app.use(cors({
+  origin: "*", // Allow your frontend
+  methods: ["GET", "POST", "PUT", "DELETE","PATCH"],
+
+}));
 app.use(express.json()) //parsing JSON data
 
 app.use("/api/products",productRoutes) //Routes

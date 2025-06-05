@@ -54,11 +54,11 @@ const updateProduct= async(req,res)=>{
         )
 
         console.log(updatedProduct)
-        return res.status(200).json({success :true, message: "Product Updated Successfully"})
+        return res.status(200).json({data: updatedProduct,success :true, message: "Product Updated Successfully"})
 
     } catch (error) {
         console.log("Error While adding a Product",error)
-             return res.status(500).json({ message: "Server error" })
+             return res.status(500).json({ message: "Server error", success:false })
     }
 
 }
@@ -67,7 +67,7 @@ const deleteProduct= async(req,res)=>{
     const id = req.params.id
 
     if (!id) {
-        return res.json(400).status({success:false, message:"Product Doesn't Exist"})
+        return res.status(400).json({success:false, message:"Product Doesn't Exist"})
     }
         try {
             await Product.findByIdAndDelete(id)
