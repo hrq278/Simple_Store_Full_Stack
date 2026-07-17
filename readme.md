@@ -24,7 +24,7 @@ _Built with the tools and technologies:_
 
 ---
 
-## 📚 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Getting Started](#getting-started)
@@ -41,18 +41,18 @@ _Built with the tools and technologies:_
 
 ### Key Features
 
-- 🛠️ **Modular Architecture** — Separation of concerns for frontend, backend, and DB layers.
-- 🚀 **Fast Development** — Vite-powered React with HMR.
-- 🔧 **Robust Backend** — Express server with full CRUD API support.
-- 🎨 **Modern UI** — Chakra UI-based responsive, accessible components.
-- 🔒 **Dev Friendly** — ESLint, environment variables, clean code structure.
-- 📦 **MongoDB Integration** — Mongoose models and controllers for seamless data flow.
+- **Modular Architecture** — Separation of concerns for frontend, backend, and DB layers
+- **Fast Development** — Vite-powered React with HMR.
+- **Robust Backend** — Express server with full CRUD API support.
+- **Modern UI** — Chakra UI-based responsive, accessible components.
+- **Dev Friendly** — ESLint, environment variables, clean code structure.
+- **MongoDB Integration** — Mongoose models and controllers for seamless data flow.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### ✅ Prerequisites
+###  Prerequisites
 
 - Node.js (v14+)
 - npm (v6+)
@@ -60,7 +60,7 @@ _Built with the tools and technologies:_
 
 ---
 
-### 📦 Installation
+###  Installation
 
 Run the following commands in your terminal:
 
@@ -72,7 +72,7 @@ npm install
 
 ---
 
-### 💡 Usage
+###  Usage
 
 To start the app:
 
@@ -83,7 +83,7 @@ npm start
 
 ---
 
-### 🧪 Testing
+###  Testing
 
 _Replace `{test_framework}` with your test library (e.g., Jest, Mocha)_
 
